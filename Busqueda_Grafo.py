@@ -40,7 +40,7 @@ def branch_and_bound(graph, start, goal, heuristic):
 
 
 def heuristica(node, goal):
-    return 0
+    return 10
 
 grafo = nx.Graph()
 
@@ -76,7 +76,7 @@ graph.add_edge('Malaga', 'Granada', weight=125)
 graph.add_edge('Granada', 'Valencia', weight=490)
 graph.add_edge('Santander', 'Zaragoza', weight=400)'''
 
-camino, coste, aristas_podadas = branch_and_bound(grafo, 'A', 'E', heuristica)
+camino, coste, aristas_podadas = branch_and_bound(grafo, 'A', 'F', heuristica)
 
 print(f"Camino óptimo: {camino} con coste: {coste}")
 print(f"Podas (caminos descartados): {aristas_podadas}")
